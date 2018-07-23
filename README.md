@@ -9,3 +9,7 @@
 ## kjb-service-flow
 * 开发环境 kjb-service-flow-dev.yml
 * 测试环境 kjb-service-flow-test.yml
+
+## kjb-service-staticstics
+* 开发环境 kjb-service-staticstics-dev.yml
+* 测试环境 kjb-service-staticstics-test.yml
