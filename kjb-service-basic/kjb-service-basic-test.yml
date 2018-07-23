@@ -1,0 +1,57 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/callkjb?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: '{cipher}7ad416c96e7f8c9ae57227f3bd30e5ba631d3fd7df8d2dc97fb6df5cc7c21172'
+    password: '{cipher}c592c403d92598af612628b6ff5b67a81a1e4ad49d7468c463cbd8e1b6ba3e2f'
+    type: com.alibaba.druid.pool.DruidDataSource
+    #初始化大小，最小，最大
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    #配置获取连接等待超时时间
+    maxWait: 60000
+    #配置多长时间检测一次需要关闭的空闲连接，单位毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    #配置一个连接在连接池中最小生存时间，单位毫秒
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    #打开PSCache，并且指定每个连接上PSCache的大小
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j
+    #通过connectionProperties属性来大爱mergeSql功能，慢sql记录
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    #合并多个DruidDataSource的监控数据
+    #UseGlobalDataSourceStat: true
+  jpa:
+    show-sql: true
+  redis:
+    host: 127.0.0.1
+    password: '{cipher}c92b3bc59632047220c5fee6be8b4026f9b26ab4a8b1847f5d346ed009f3f5f1'
+    database: 1
+    port: 6379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: '{cipher}2400616a8d65b62db3f53aa6c8443d3a09bd895ad66b143f34c0740999c496a4'
+    password: '{cipher}2400616a8d65b62db3f53aa6c8443d3a09bd895ad66b143f34c0740999c496a4'
+
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://127.0.0.1:8761/eureka/
+    instance:
+      prefer-ip-address: true
+
+logging:
+  file: /usr/local/java0/logs/kjb-service-basic.log
+
