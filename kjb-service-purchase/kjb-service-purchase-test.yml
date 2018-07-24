@@ -1,9 +1,4 @@
-server:
-  port: 8003
-
 spring:
-  application:
-    name: kjb-service-purchase
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/callkjb?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
@@ -140,8 +135,8 @@ push:
   profile: DEV
   accessKeyId: '{cipher}069e03691f82c73ae94e899177e1d894c619922c23c930f95dc34ffcd1cefd982047415fa5ee5e491bcd06bab5456b5a'
   accessKeySecret: '{cipher}5d0dfda766a609bda404e1fdbcc3093b13c468fed36ae1a1589233d2d3425ead8d63553d8cca5cd46285b2ca4a5ef56f'
-  androidAppKey: 24956612
-  iosAppKey: 24955926
+  androidAppKey: '{cipher}b5d947b5dd5eb38695b6f56ff0d4df2dd61d7dc25e06235537ee5750b45c6dc2'
+  iosAppKey: '{cipher}9279815297069258275dceaf9b01b79e8f135effad9dae0cf3520c4c96ca06fb'
   androidSuffix: android
   iosSuffix: ios
   androidOpenType: ACTIVITY

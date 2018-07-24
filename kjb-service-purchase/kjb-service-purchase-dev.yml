@@ -1,9 +1,4 @@
-server:
-  port: 8003
-
 spring:
-  application:
-    name: kjb-service-purchase
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/callkjb?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
