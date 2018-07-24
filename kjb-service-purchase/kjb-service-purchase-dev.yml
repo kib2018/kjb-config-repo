@@ -1,0 +1,150 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: kjb-service-purchase
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/callkjb?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: '{cipher}37ae3b747c4a841d0169c202cc76eb67c8341e607b591f65764e2ed9479ff234'
+    password:
+    type: com.alibaba.druid.pool.DruidDataSource
+    #初始化大小，最小，最大
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    #配置获取连接等待超时时间
+    maxWait: 60000
+    #配置多长时间检测一次需要关闭的空闲连接，单位毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    #配置一个连接在连接池中最小生存时间，单位毫秒
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    #打开PSCache，并且指定每个连接上PSCache的大小
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j
+    #通过connectionProperties属性来大爱mergeSql功能，慢sql记录
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    #合并多个DruidDataSource的监控数据
+    #UseGlobalDataSourceStat: true
+  jpa:
+    show-sql: true
+  redis:
+      host: 127.0.0.1
+      password: '{cipher}4b54dea2025c9ea0df1166136e9e7395f94619ca0e239c1d682639fb36cfe9a9'
+      database: 1
+      port: 6379
+      pool:
+        max-idle: 100
+        min-idle: 1
+        max-active: 1000
+        max-wait: -1
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: '{cipher}2400616a8d65b62db3f53aa6c8443d3a09bd895ad66b143f34c0740999c496a4'
+    password: '{cipher}2400616a8d65b62db3f53aa6c8443d3a09bd895ad66b143f34c0740999c496a4'
+
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://172.16.16.250:8761/eureka/,http://172.16.16.250:8762/eureka/
+    instance:
+      prefer-ip-address: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 10000
+
+
+
+
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  eureka:
+    enabled: true
+
+
+#aliyun短信服务配置
+aliyun:
+  dysms:
+    product: Dysmsapi
+    domain: dysmsapi.aliyuncs.com
+    accessKeyId: '{cipher}41926995ca5962fbb6d29a9f7a2bdf620e5773a4af03386d754f6c671df7f90d245229c3e03e7af9fd260f5fa45c5723'
+    accessKeySecret: '{cipher}604e7df4e951bb42878ab0225c40f73f767420412d5a4136fa4146b1d551025da4d70c4472a54d4776a0c760b4c994d7'
+    defaultConnectTimeout: 10000
+    defaultReadTimeout: 10000
+    profile: cn-hangzhou
+    switchFlag: true
+
+#e签宝电子签章服务配置
+esign:
+  projectId: '{cipher}85c5822a77fe05636d970e491fb1d2d1c611de3ca78b2d064ecedbfca81b407a'
+  projectSecret: '{cipher}7289777905fa770a4edcf7df46affb114573b6a9b5173e1220e9742f0883d41d52b8aafd80714e79761d51608b05345a67cd4f7547e2c654c8144e59f3265fe4'
+  apisUrl: http://121.40.164.61:8080/tgmonitor/rest/app!getAPIInfo2
+  proxyIp:
+  port:
+  httpType: HTTP
+  retry: 5
+  algorithm: HMACSHA256
+  privateKey:
+  esignPublicKey:
+  devId:
+
+# 七牛上传服务
+qiniu:
+  accessKey: '{cipher}ea5d56c0edd6b8743eb49f3586c2030d080f777d06abadfa3b15ac3dbdf3cea28bfb8e73eb0145e01c5a3e19989eb704a35ea6e04aac19475a2c9692021431d4'
+  secretKey: '{cipher}4ab908fd10318febe809d0763dbb0417c5bbea98b69826ac7d71d366dd891d1a02420cb745194164e98f4f54155fdc8b93f40a195de3f8d4d060f742c2300da3'
+  bucket: test
+  domain: http://oq17tqf1l.bkt.clouddn.com/
+
+callkjb:
+  basePath: /Users/xuwf/weid/tmp/callkjb_data
+  pdf:
+    template:
+       leaseContractsTemplate: http://oq17tqf1l.bkt.clouddn.com/lease_contracts_template.pdf
+       mortgageListTemplate: http://oq17tqf1l.bkt.clouddn.com/mortgage_list_template.pdf
+       receiptTemplate: http://oq17tqf1l.bkt.clouddn.com/receipt_template.pdf
+       mortgageContractTemplate: http://oq17tqf1l.bkt.clouddn.com/mortgage_contract_template.pdf
+       mortgageSuperviseTemplate: http://oq17tqf1l.bkt.clouddn.com/mortgage_supervise_template.pdf
+       bondsTransferTemplate: http://oq17tqf1l.bkt.clouddn.com/bonds_transfer_template.pdf
+
+# Gps定位
+gps:
+  host: http://www.kjber.cn
+  username: '{cipher}020b177f1f296a0692fede5d10b40bba23fea519d8f8ea33a1bd5216523b7f8f'
+  password: '{cipher}ef881f9512d32f251843c37f3d3668432a9d9c0230c2a726452d97fe743b5680'
+  clientId: /Interface/ClientID.asp
+  token: /Interface/Token.asp
+  exec: /Interface/Exec.asp
+  cmd: /Interface/Cmd.asp
+  alarmAccount: '{cipher}95416907840421d1cc505dc5ae2e680db11ae53448c0002b39a8345bea4f9efa'
+  alarmPassword: '{cipher}a44499e8909cf01ddc186cdc0323198ff5c5e613f3c40220fc31566d04ea17f4'
+
+# 移动端推送
+push:
+  target: ACCOUNT
+  pushType: NOTICE
+  profile: DEV
+  accessKeyId: '{cipher}069e03691f82c73ae94e899177e1d894c619922c23c930f95dc34ffcd1cefd982047415fa5ee5e491bcd06bab5456b5a'
+  accessKeySecret: '{cipher}5d0dfda766a609bda404e1fdbcc3093b13c468fed36ae1a1589233d2d3425ead8d63553d8cca5cd46285b2ca4a5ef56f'
+  androidAppKey: '{cipher}b5d947b5dd5eb38695b6f56ff0d4df2dd61d7dc25e06235537ee5750b45c6dc2'
+  iosAppKey: '{cipher}9279815297069258275dceaf9b01b79e8f135effad9dae0cf3520c4c96ca06fb'
+  androidSuffix: android
+  iosSuffix: ios
+  androidOpenType: ACTIVITY
+  androidActivity: com.callkjb.work.activity.publics.MessageActivity
+
