@@ -9,6 +9,11 @@ spring:
       min-idle: 1
       max-active: 1000
       max-wait: -1
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: '{cipher}2400616a8d65b62db3f53aa6c8443d3a09bd895ad66b143f34c0740999c496a4'
+    password: '{cipher}2400616a8d65b62db3f53aa6c8443d3a09bd895ad66b143f34c0740999c496a4'    
 
 
 
