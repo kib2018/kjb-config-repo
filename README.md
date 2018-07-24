@@ -17,3 +17,7 @@
 ## kjb-service-purchase
 * 开发环境 kjb-service-purchase-dev.yml
 * 测试环境 kjb-service-purchase-test.yml
+
+## kjb-api-mobole
+* 开发环境 kjb-api-mobole-dev.yml
+* 测试环境 kjb-api-mobole-test.yml
