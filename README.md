@@ -21,3 +21,7 @@
 ## kjb-api-mobole
 * 开发环境 kjb-api-mobole-dev.yml
 * 测试环境 kjb-api-mobole-test.yml
+
+## kjb-api-admin
+* 开发环境 kjb-api-admin-dev.yml
+* 测试环境 kjb-api-admin-test.yml
