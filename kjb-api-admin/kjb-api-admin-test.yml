@@ -1,4 +1,7 @@
 spring:
+  sleuth:
+    sampler:
+      percentage: 1
   redis:
     host: 127.0.0.1
     password: '{cipher}c92b3bc59632047220c5fee6be8b4026f9b26ab4a8b1847f5d346ed009f3f5f1'
