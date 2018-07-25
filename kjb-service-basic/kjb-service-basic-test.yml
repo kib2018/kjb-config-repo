@@ -54,4 +54,7 @@ eureka:
 
 logging:
   file: /usr/local/java0/logs/kjb-service-basic.log
+  level:
+    root: INFO
+    org.springframework.web.servlet.DispatcherServlet: DEBUG 
 

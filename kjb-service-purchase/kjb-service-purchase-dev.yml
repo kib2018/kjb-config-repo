@@ -143,3 +143,8 @@ push:
   androidOpenType: ACTIVITY
   androidActivity: com.callkjb.work.activity.publics.MessageActivity
 
+logging:
+  level:
+    root: INFO
+    org.springframework.web.servlet.DispatcherServlet: DEBUG   
+

@@ -70,6 +70,9 @@ ribbon:
 
 logging:
   file: /usr/local/java0/logs/kjb-service-purchase.log
+  level:
+    root: INFO
+    org.springframework.web.servlet.DispatcherServlet: DEBUG 
 
 
 #aliyun短信服务配置

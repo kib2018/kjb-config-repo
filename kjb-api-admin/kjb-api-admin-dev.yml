@@ -42,3 +42,7 @@ ribbon:
   eureka:
     enabled: true
 
+logging:
+  level:
+    root: INFO
+    org.springframework.web.servlet.DispatcherServlet: DEBUG    
