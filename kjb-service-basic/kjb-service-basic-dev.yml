@@ -4,7 +4,7 @@ spring:
       percentage: 1.0
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/callkjb?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    url: jdbc:mysql://172.16.16.251:3306/callkjb?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
     username: '{cipher}7ad416c96e7f8c9ae57227f3bd30e5ba631d3fd7df8d2dc97fb6df5cc7c21172'
     password: '{cipher}c592c403d92598af612628b6ff5b67a81a1e4ad49d7468c463cbd8e1b6ba3e2f'
     type: com.alibaba.druid.pool.DruidDataSource
