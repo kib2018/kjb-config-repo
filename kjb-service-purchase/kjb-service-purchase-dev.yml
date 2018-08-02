@@ -113,7 +113,7 @@ callkjb:
   basePath: /Users/xuwf/weid/tmp/callkjb_data
   pdf:
     template:
-       leaseContractsTemplate: http://ou525oats.bkt.clouddn.com/lease_contracts_template.pdf       # http://oq17tqf1l.bkt.clouddn.com/lease_contracts_template.pdf
+       leaseContractsTemplate: http://ou525oats.bkt.clouddn.com/lease_contracts_template.pdf       # http://oq17tqf1l.bkt.clouddn.com/lease_contracts_template.pdf 
        mortgageListTemplate: http://ou525oats.bkt.clouddn.com/mortgage_list_template.pdf           # http://oq17tqf1l.bkt.clouddn.com/mortgage_list_template.pdf
        receiptTemplate: http://ou525oats.bkt.clouddn.com/receipt_template.pdf                      # http://oq17tqf1l.bkt.clouddn.com/receipt_template.pdf
        mortgageContractTemplate: http://ou525oats.bkt.clouddn.com/mortgage_contract_template.pdf   # http://oq17tqf1l.bkt.clouddn.com/mortgage_contract_template.pdf
