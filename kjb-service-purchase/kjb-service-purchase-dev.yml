@@ -113,12 +113,12 @@ callkjb:
   basePath: /Users/xuwf/weid/tmp/callkjb_data
   pdf:
     template:
-       leaseContractsTemplate: http://oq17tqf1l.bkt.clouddn.com/lease_contracts_template.pdf
-       mortgageListTemplate: http://oq17tqf1l.bkt.clouddn.com/mortgage_list_template.pdf
-       receiptTemplate: http://oq17tqf1l.bkt.clouddn.com/receipt_template.pdf
-       mortgageContractTemplate: http://oq17tqf1l.bkt.clouddn.com/mortgage_contract_template.pdf
-       mortgageSuperviseTemplate: http://oq17tqf1l.bkt.clouddn.com/mortgage_supervise_template.pdf
-       bondsTransferTemplate: http://oq17tqf1l.bkt.clouddn.com/bonds_transfer_template.pdf
+       leaseContractsTemplate: http://ou525oats.bkt.clouddn.com/lease_contracts_template.pdf       # http://oq17tqf1l.bkt.clouddn.com/lease_contracts_template.pdf
+       mortgageListTemplate: http://ou525oats.bkt.clouddn.com/mortgage_list_template.pdf           # http://oq17tqf1l.bkt.clouddn.com/mortgage_list_template.pdf
+       receiptTemplate: http://ou525oats.bkt.clouddn.com/receipt_template.pdf                      # http://oq17tqf1l.bkt.clouddn.com/receipt_template.pdf
+       mortgageContractTemplate: http://ou525oats.bkt.clouddn.com/mortgage_contract_template.pdf   # http://oq17tqf1l.bkt.clouddn.com/mortgage_contract_template.pdf
+       mortgageSuperviseTemplate: http://ou525oats.bkt.clouddn.com/mortgage_supervise_template.pdf # http://oq17tqf1l.bkt.clouddn.com/mortgage_supervise_template.pdf
+       bondsTransferTemplate: http://ou525oats.bkt.clouddn.com/bonds_transfer_template.pdf         # http://oq17tqf1l.bkt.clouddn.com/bonds_transfer_template.pdf
 
 # Gps定位
 gps:
