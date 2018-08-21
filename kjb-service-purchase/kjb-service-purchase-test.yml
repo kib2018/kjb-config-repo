@@ -108,8 +108,9 @@ esign:
 qiniu:
   accessKey: '{cipher}ea5d56c0edd6b8743eb49f3586c2030d080f777d06abadfa3b15ac3dbdf3cea28bfb8e73eb0145e01c5a3e19989eb704a35ea6e04aac19475a2c9692021431d4'
   secretKey: '{cipher}4ab908fd10318febe809d0763dbb0417c5bbea98b69826ac7d71d366dd891d1a02420cb745194164e98f4f54155fdc8b93f40a195de3f8d4d060f742c2300da3'
-  bucket: test
-  domain: http://oq17tqf1l.bkt.clouddn.com/
+  bucket: callkjb-test
+  domain: http://pdsr00z7j.bkt.clouddn.com/
+
 
 callkjb:
   basePath: /usr/local/tmp
