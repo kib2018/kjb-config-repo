@@ -1,0 +1,49 @@
+spring:
+  sleuth:
+    sampler:
+      percentage: 1.0
+  redis:
+    host: 127.0.0.1
+    password: '{cipher}c768729a5b3000de8a48093ed4038b81904e74602facd366f46ccdf6e0d7492c'
+    database: 1
+    port: 6379
+    pool:
+      max-idle: 100
+      min-idle: 1
+      max-active: 1000
+      max-wait: -1
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: '{cipher}2400616a8d65b62db3f53aa6c8443d3a09bd895ad66b143f34c0740999c496a4'
+    password: '{cipher}2400616a8d65b62db3f53aa6c8443d3a09bd895ad66b143f34c0740999c496a4'    
+
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://127.0.0.1:8761/eureka/
+    instance:
+      prefer-ip-address: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 10000
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  eureka:
+    enabled: true
+
+
+logging:
+  file: /usr/local/java0/logs/kjb-service-admin.log
+  level:
+    root: INFO
+    org.springframework.web.servlet.DispatcherServlet: DEBUG    
