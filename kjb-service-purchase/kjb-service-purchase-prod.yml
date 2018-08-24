@@ -92,9 +92,9 @@ aliyun:
 
 #e签宝电子签章服务配置
 esign:
-  projectId: '{cipher}85c5822a77fe05636d970e491fb1d2d1c611de3ca78b2d064ecedbfca81b407a'
-  projectSecret: '{cipher}7289777905fa770a4edcf7df46affb114573b6a9b5173e1220e9742f0883d41d52b8aafd80714e79761d51608b05345a67cd4f7547e2c654c8144e59f3265fe4'
-  apisUrl: http://121.40.164.61:8080/tgmonitor/rest/app!getAPIInfo2
+  projectId: '{cipher}ca3330ce21e90d0b94fc2be447a1397e3f8fcc160348a2d9cd5f556136c436e4'
+  projectSecret: '{cipher}a881bcdd53f4b24f9c2a9376b55da7b98f94e4610bf80cc6d546fa219b85c5b3343150bb3a0fb4dbd33c61056c36082773faf066347d1809af0a9d3b260ccdb0'
+  apisUrl: http://openapi.tsign.cn:8080/tgmonitor/rest/app!getAPIInfo2
   proxyIp:
   port:
   httpType: HTTP
